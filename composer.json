@@ -1,0 +1,27 @@
+{
+    "name": "markhuot/craft-forced-eager",
+    "type": "yii2-extension",
+    "autoload": {
+        "psr-4": {
+            "markhuot\\forcedeager\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "markhuot",
+            "email": "mark@markhuot.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^4.3"
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
+    },
+    "extra": {
+        "bootstrap": "markhuot\\forcedeager\\Eager"
+    }
+}
