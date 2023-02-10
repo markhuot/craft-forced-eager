@@ -1,6 +1,7 @@
 {
     "name": "markhuot/craft-forced-eager",
     "type": "yii2-extension",
+    "license": "proprietary",
     "autoload": {
         "psr-4": {
             "markhuot\\forcedeager\\": "src/"
