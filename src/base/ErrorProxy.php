@@ -19,10 +19,15 @@ class ErrorProxy
 
     public function __call($name, $arguments)
     {
-        throw new LazyLoadedRelationException('You are lazily accessing a relationship through the [' . $this->field->handle . '] field that should be eager loaded. Try adding `.with([\'' . $this->field->handle . '\'])` to the query.');
+        $this->throwError();
     }
 
     public function __get($name)
+    {
+        $this->throwError();
+    }
+
+    protected function throwError()
     {
         throw new LazyLoadedRelationException('You are lazily accessing a relationship through the [' . $this->field->handle . '] field that should be eager loaded. Try adding `.with([\'' . $this->field->handle . '\'])` to the query.');
     }
